@@ -6,6 +6,7 @@
     <title>Admin Dashboard | Job Portal</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/dashboard.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/table.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/sm_screen.css'); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -31,10 +32,10 @@
         <h1>Dashboard</h1>
 <div class="header-actions">
 <button class="add-job-btn" onclick="window.location.href='<?php echo site_url('dashboard/insert_job'); ?>'">
-    <i class="fas fa-plus"></i> Add Job
+    <i class="fas fa-plus"></i> <span>Add Job</span>
 </button>
         </header>
-
+     <div class = "container-content">
         <section class="dashboard-overview">
             <div class="cards">
                 <div class="card">
@@ -117,7 +118,9 @@
     </div>
 </div>
     </div>
+</div>
 
     <script src="<?= base_url('assets/js/dashboard.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/sm_screen.js'); ?>"></script>
 </body>
 </html>

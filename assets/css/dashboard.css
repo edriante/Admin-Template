@@ -1,4 +1,3 @@
-/* General styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
@@ -10,8 +9,6 @@ body {
     color: #333;
 }
 
-
-/* Sidebar */
 .nav-links a,
 .toggle-btn,
 .unique-card tr th,
@@ -24,7 +21,7 @@ h1, h2, h3,
     background-color: #1f2937;
     color: white;
     height: 100vh;
-    padding: 20px;
+    padding: 16px;
     position: fixed;
     transition: width 0.3s ease;
 }
@@ -81,7 +78,7 @@ h1, h2, h3,
     background-color: #374151;
 }
 
-/* Collapsed Sidebar */
+
 .sidebar.collapsed {
     width: 50px;
 }
@@ -91,10 +88,10 @@ h1, h2, h3,
     display: none;
 }
 
-/* Main Content */
+
 .main-content {
-    margin-left: 250px;
-    width: calc(100% - 250px);
+    margin-left: 170px;
+    width: calc(100% - 170px);
     transition: margin-left 0.3s ease, width 0.3s ease;
 }
 
@@ -110,14 +107,15 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 header h1 {
     font-size: 24px;
-    margin-left: 20px;
+    margin-left: 70px;
 }
 
-/* Dashboard Cards */
+
 .dashboard-overview {
     margin-top: 20px;
 }
@@ -126,14 +124,14 @@ header h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    
+    padding: 16px;
 }
 
 .card {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -158,14 +156,14 @@ header h1 {
     color: #6b7280;
     margin: 5px 0 0;
 }
-/* Header actions container */
+
 .header-actions {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-/* Add Job button */
+
 .add-job-btn {
     background-color: #3b82f6;
     color: white;

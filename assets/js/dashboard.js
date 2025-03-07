@@ -5,16 +5,30 @@ document.addEventListener('DOMContentLoaded', function () {
     const sidebarTitle = document.getElementById('sidebarTitle');
     const linkTexts = document.querySelectorAll('.link-text');
 
-    toggleBtn.addEventListener('click', function () {
-        sidebar.classList.toggle('collapsed');
-        mainContent.classList.toggle('collapsed');
-        
-        linkTexts.forEach(text => {
-            text.style.transition = 'opacity 0.3s ease';
-            text.style.opacity = sidebar.classList.contains('collapsed') ? '0' : '1';
-        });
+    function applySidebarState(collapsed) {
+        sidebar.classList.toggle('collapsed', collapsed);
+        mainContent.classList.toggle('collapsed', collapsed);
 
-        sidebarTitle.style.opacity = sidebar.classList.contains('collapsed') ? '0' : '1';
+        const opacity = collapsed ? '0' : '1';
+        linkTexts.forEach(text => text.style.opacity = opacity);
+        sidebarTitle.style.opacity = opacity;
+    }
+
+    function checkScreenSize() {
+        if (window.matchMedia("(max-width: 723px)").matches) {
+            applySidebarState(true); 
+        } else {
+            applySidebarState(false); 
+        }
+    }
+
+    
+    checkScreenSize();
+
+    
+    window.addEventListener('resize', checkScreenSize);
+
+    toggleBtn.addEventListener('click', function () {
+        applySidebarState(!sidebar.classList.contains('collapsed'));
     });
 });
-
