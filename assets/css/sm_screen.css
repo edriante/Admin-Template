@@ -24,3 +24,52 @@
     flex-direction: column; 
     gap: 20px;
 }
+/* Dropdown Styles */
+.sm-screen .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.sm-screen .dropdown-content {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    min-width: 150px;
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.sm-screen .dropdown-content.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.sm-screen .dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.sm-screen .dropdown-content a:hover {
+    background: #f0f0f0;
+}
+
+.sm-screen .add-job-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

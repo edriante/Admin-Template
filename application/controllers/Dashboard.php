@@ -6,12 +6,16 @@ class Dashboard extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('Job_model');
+        $this->load->database(); 
+        $this->load->helper(['url', 'form']); 
+        $this->load->library(['session', 'form_validation', 'upload']);
     }
 
     public function index() {
         $this->load->view('dashboard');
     }
 
+    /** Job Functions **/
     public function insert_job() {
         $this->load->view('insert_job');
     }

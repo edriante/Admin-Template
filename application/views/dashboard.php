@@ -31,9 +31,17 @@
         <header>
         <h1>Dashboard</h1>
 <div class="header-actions">
-<button class="add-job-btn" onclick="window.location.href='<?php echo site_url('dashboard/insert_job'); ?>'">
-    <i class="fas fa-plus"></i> <span>Add Job</span>
-</button>
+<div class="dropdown">
+    <button class="add-job-btn" id="dropdownBtn">
+        <i class="fas fa-plus"></i> <span>Add New</span>
+    </button>
+    <div class="dropdown-content" id="dropdownContent">
+        <a href="<?php echo site_url('ui/Home/insert_music'); ?>">Music</a>
+        <a href="<?php echo site_url(''); ?>">Users</a>
+        <a href="<?php echo site_url(''); ?>">Artist</a>
+    </div>
+</div>
+
         </header>
      <div class = "container-content">
         <section class="dashboard-overview">
@@ -119,7 +127,7 @@
 </div>
     </div>
 </div>
-
+    <script src="<?= base_url('assets/js/dropdown.js'); ?>"></script>
     <script src="<?= base_url('assets/js/dashboard.js'); ?>"></script>
     <script src="<?= base_url('assets/js/sm_screen.js'); ?>"></script>
 </body>

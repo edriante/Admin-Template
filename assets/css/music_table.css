@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+.recommended-section {
+    padding: 20px;
+}
+
+.recommended-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent; /* Transparent background */
+}
+.recommended-section h2{
+    border-bottom: 1px solid #282828; 
+}
+th, td{
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    
+}
+
+th {
+    font-weight: 600;
+    color: black;
+}
+
+td {
+    white-space: nowrap;
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.1); 
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+th:first-child {
+    padding-left: 70px;
+}
+
+.track-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    flex-shrink: 0;
+}

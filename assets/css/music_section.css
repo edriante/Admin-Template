@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+.music-section {
+    padding: 20px;
+}
+
+.music-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.music-card {
+    background-color: #000000;
+    background: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.music-card:hover {
+    background: #333;
+}
+
+.music-card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block; 
+    margin: 0; 
+}
+
+.music-card h3 {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #ffffff;
+    text-transform: capitalize;
+}

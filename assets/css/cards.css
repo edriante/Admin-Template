@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+.genre-section {
+    padding: 20px;
+}
+
+.genre-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.genre-card {
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    background: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.genre-card:hover {
+    background: #333;
+}
+
+.genre-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.genre-card p {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff;
+    text-transform: capitalize;
+}
